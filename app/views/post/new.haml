@@ -1,0 +1,14 @@
+%h2 Write a New Post
+-if !current_user.nil?
+	=form_for Post.new, :url => "/post" do |f|
+		=f.label "Post Title"
+		=f.text_field :post_name
+		=f.label "Post Description"
+		=f.text_area :post_description
+		=f.label "Post"
+		=f.text_area :post_text, :class => "input-block-level", :rows => "10"
+		=f.submit :Submit, :class => "btn btn-success"
+		=f.error_messages
+-else 
+	Please sign in to create a post
+

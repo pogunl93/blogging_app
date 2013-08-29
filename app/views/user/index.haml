@@ -1,0 +1,5 @@
+%h3 Blogr's Writers
+-@users.each do |user|
+	=user.fname 
+	=link_to "Follow", follow_path(:query => "#{user.id}")
+	%br

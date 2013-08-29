@@ -1,0 +1,14 @@
+%h2 Sign Up for Blogr
+=form_for User.new, :url => "/user" do |f|
+	=f.label "First Name"
+	=f.text_field :fname
+	=f.label "Last Name"
+	=f.text_field :lname
+	=f.label "Email"
+	=f.text_field :email
+	=f.label "Username"
+	=f.text_field :username
+	=f.label "Password"
+	=f.password_field :password
+	%br
+	=f.submit :Submit ,:class => "btn"

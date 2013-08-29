@@ -1,0 +1,8 @@
+%h2 Recent Posts on Blogr
+-@posts.each do |post|
+	%a{:href => "/post/#{post.id}"}="#{post.post_name}"
+	%font{:size => "1.3em"}="by #{post.user.full_name}"
+	%br
+	=post.post_description
+	%br
+	%br
